@@ -1,0 +1,20 @@
+{
+  "name": "Liquid Planner",
+  "version": "1.0",
+  "description": "For ids",
+  "browser_action": {
+    "default_icon" : "favicon.png",
+    "popup" : "background.html"
+  },
+  "background_page" : "background.html",
+  "content_scripts": [
+    {
+      "matches": ["https://*.liquidplanner.com/*"],
+      "css": ["mystyles.css"],
+      "js": ["jquery.js", "jquery.livequery.js", "myscript.js"]
+    }
+  ],
+  "permissions": [
+    "http://api.flickr.com/", "http://search.twitter.com/"
+  ]
+}
